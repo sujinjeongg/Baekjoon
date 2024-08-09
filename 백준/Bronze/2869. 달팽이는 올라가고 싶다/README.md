@@ -30,3 +30,27 @@
 
  <p>첫째 줄에 달팽이가 나무 막대를 모두 올라가는데 며칠이 걸리는지 출력한다.</p>
 
+### 잘못된 접근 방법
+시간 초과 : 
+
+    #include <stdio.h>
+    
+    int main(){
+    int A, B, V;
+    scanf("%d %d %d", &A, &B, &V);
+    
+    int day = 0, height = 0;
+    while(height < V){
+        day++;
+        height += A;
+        if(height >= V)
+            break;
+        else
+            height -= B;
+    }
+    
+    printf("%d", day);
+    
+    return 0;
+    }
+
